@@ -1,0 +1,25 @@
+<!doctype html>
+<html><head><title>Letter Game</title><body>
+<h2>Letter Game</h2>
+
+<form method="POST">
+  <label for="lang">Choose a language:</label><br>
+  <select id="lang" name="lang">
+    <option value="English">English</option>
+    <option value="Spanish">Spanish</option>
+    <option value="Ijaw">Ijaw</option>
+    <option value="Yoruba">Yoruba</option>
+    <option value="Igbo">Igbo</option>
+  </select><br><br>
+  
+  <label for="alpha_index">Choose number position in alphabet:</label><br>
+  <input type="number" id="alpha_index" name="alpha_index" min="1" max="36">
+  
+  <input type="submit">
+</form>
+
+{% if lower and upper%}
+<p>Letter number {{index}} in {{lang}} is ({{upper}}, {{lower}}). Play again!</p>
+{% endif %}
+
+</body></html>
